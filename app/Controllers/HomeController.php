@@ -7,9 +7,11 @@ class HomeController extends Controller
 {
     public function index()
     {
+        $user = $_SESSION['user'] ?? null;
+
         $this->view('home/index', [
-            'title' => 'Enterprise TaskFlow',
-            'message' => 'Здравей, това е твоята MVC структура!'
+            'title' => 'Building Manager',
+            'user' => $user
         ]);
     }
 }

@@ -18,21 +18,22 @@ class Router
 
     public function dispatch()
     {
-        $url = $_GET['url'] ?? ''; 
-        $url = '/' . rtrim($url, '/');
-        if ($url == '//') $url = '/';
+        $uri = $_SERVER['REQUEST_URI'];
+        
+        $path = parse_url($uri, PHP_URL_PATH);
 
         $method = $_SERVER['REQUEST_METHOD'];
 
-        if (isset($this->routes[$method][$url])) {
-            $controllerName = $this->routes[$method][$url]['controller'];
-            $action = $this->routes[$method][$url]['action'];
+        if (isset($this->routes[$method][$path])) {
+            $controllerName = $this->routes[$method][$path]['controller'];
+            $action = $this->routes[$method][$path]['action'];
 
             $controllerClass = "App\\Controllers\\$controllerName";
             $controller = new $controllerClass();
             
             $controller->$action();
         } else {
+            http_response_code(404);
             echo "404 Not Found";
         }
     }

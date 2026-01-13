@@ -1,0 +1,65 @@
+:root {
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: 1px solid rgba(255, 255, 255, 0.5);
+    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+}
+
+body { 
+    font-family: 'Inter', sans-serif; 
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); 
+    min-height: 100vh; padding: 20px;
+    color: #2d3748;
+}
+
+.header { 
+    background: var(--glass-bg); backdrop-filter: blur(12px); border: var(--glass-border);
+    border-radius: 16px; padding: 15px 25px; margin-bottom: 30px;
+    display: flex; justify-content: space-between; align-items: center;
+    box-shadow: var(--glass-shadow);
+}
+h1 { margin: 0; font-size: 1.5rem; color: #1a202c; display:flex; align-items:center; gap:10px; }
+
+.btn { 
+    text-decoration: none; padding: 10px 20px; border-radius: 10px; font-weight: 600; 
+    transition: transform 0.2s; display: inline-block;
+}
+.btn-primary { 
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%); color: white; 
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11); 
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1); }
+
+.btn-outline { color: #718096; margin-left: 10px; }
+.btn-outline:hover { color: #2d3748; }
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 16px; padding: 25px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: all 0.3s ease; border: 1px solid transparent;
+    display: flex; flex-direction: column; justify-content: space-between;
+    min-height: 200px;
+}
+.project-card:hover { 
+    transform: translateY(-5px); 
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    border-color: rgba(102, 126, 234, 0.3);
+}
+
+.project-card h3 { margin: 0 0 10px 0; font-size: 1.25rem; color: #2d3748; }
+.project-card p { color: #718096; line-height: 1.5; font-size: 0.95rem; flex-grow: 1; margin-bottom: 20px; }
+
+.card-footer { border-top: 1px solid #edf2f7; padding-top: 15px; text-align: right; }
+.btn-open { color: #5a67d8; font-weight: 600; text-decoration: none; font-size: 0.9rem; }
+.btn-open:hover { text-decoration: underline; }
+
+.empty-state {
+    grid-column: 1 / -1; text-align: center; padding: 50px;
+    background: rgba(255,255,255,0.5); border-radius: 20px; color: #718096;
+}
