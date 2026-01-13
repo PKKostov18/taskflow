@@ -4,9 +4,6 @@
 
 It features an interactive **Kanban Board**, comprehensive **Role-Based Access Control (RBAC)**, an **Admin Dashboard** with internal messaging, and a stunning **Glassmorphism UI**.
 
-![Dashboard Preview](public/uploads/preview.png)
-*(Note: Place a screenshot of your dashboard in public/uploads/preview.png)*
-
 ---
 
 ## ✨ Key Features
