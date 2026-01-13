@@ -1,58 +1,61 @@
-# 🚀 TaskFlow / Building Manager
+# 🚀 TaskFlow 
 
-**TaskFlow** е модерна уеб-базирана система за управление на проекти и задачи (Project Management System), разработена със собствен **PHP MVC Framework**.
+**TaskFlow** is a modern, web-based **Project Management System** built from scratch using a custom **PHP MVC Framework**.
 
-Приложението предлага интерактивна **Kanban дъска**, система за роли (RBAC), административен панел и красив **Glassmorphism** дизайн.
+It features an interactive **Kanban Board**, comprehensive **Role-Based Access Control (RBAC)**, an **Admin Dashboard** with internal messaging, and a stunning **Glassmorphism UI**.
 
 ![Dashboard Preview](public/uploads/preview.png)
-*(Тук можеш да сложиш скрийншот на твоя dashboard)*
+*(Note: Place a screenshot of your dashboard in public/uploads/preview.png)*
 
 ---
 
-## ✨ Основни Функционалности
+## ✨ Key Features
 
-### 🏗️ Управление на Проекти & Задачи
-* **Kanban Дъска:** Drag & Drop функционалност за местене на задачи (To Do / In Progress / Done).
-* **Детайли за задачи:** Крайни срокове (Due Dates), Приоритети (Low/Medium/High), Описание.
-* **История (Activity Log):** Автоматично записване на всяко действие (кой какво е променил).
-* **Прикачени файлове:** Възможност за качване на снимки и PDF към задачите.
-* **Коментари:** Дискусия под всяка задача в реално време.
+### 🏗️ Project & Task Management
+* **Interactive Kanban Board:** Full Drag & Drop functionality to move tasks between stages (To Do / In Progress / Done).
+* **Task Details:** Set Due Dates, Priorities (Low/Medium/High), and detailed descriptions.
+* **Analytics:** Real-time **Chart.js** visualization of project progress.
+* **Attachments:** Upload screenshots or PDF files to specific tasks.
+* **Activity Logs:** Automatic tracking of all user actions (history of changes).
+* **Comments:** Real-time team discussion under every task.
 
-### 👥 Потребители & Роли
-Системата поддържа 3 нива на достъп:
-1.  **🛡️ Admin:**
-    * Пълен достъп до Admin Dashboard.
-    * Управление на всички потребители (триене, смяна на роли).
-    * Глобален преглед на всички проекти.
-    * Вътрешна поща (Inbox) за комуникация с екипа.
+### 🛡️ Admin & Roles System
+The platform supports 3 distinct user roles:
+
+1.  **👑 Admin (Super User):**
+    * Access to a dedicated **Admin Dashboard**.
+    * **User Management:** Edit roles, delete users, view details.
+    * **Global Project Oversight:** View and manage all projects in the system.
+    * **Internal Inbox:** Receive messages/requests from users (e.g., role upgrade requests).
 2.  **💼 Manager:**
-    * Създаване и изтриване на проекти.
-    * Поквaнване на членове в екипа.
+    * Create and delete projects.
+    * Invite team members to projects via email.
 3.  **👨‍💻 Developer:**
-    * Достъп до задачите, промяна на статус, писане на коментари.
+    * View assigned tasks.
+    * Update task status and participate in discussions.
 
-### 🎨 UI/UX Дизайн
-* **Glassmorphism:** Модерен, полупрозрачен дизайн с анимирани фонове.
-* **Адаптивност:** Работи на десктоп и мобилни устройства.
-* **Графики:** Интегриран **Chart.js** за статистика на задачите.
-
----
-
-## 🛠️ Технологичен Стек
-
-* **Backend:** PHP 8+ (Native, OOP, MVC Pattern).
-* **Database:** MySQL (PDO).
-* **Frontend:** HTML5, CSS3 (Custom Grid/Flexbox), JavaScript (Vanilla ES6).
-* **Libraries:** Chart.js (за графики).
-* **Server:** Apache (XAMPP/WAMP).
+### 🎨 Modern UI/UX
+* **Glassmorphism Design:** Translucent panels, blur effects, and animated background blobs.
+* **Responsive:** Fully optimized for Desktops, Tablets, and Mobile devices.
+* **Dynamic UX:** Modal windows, smooth transitions, and intuitive navigation.
 
 ---
 
-## ⚙️ Инсталация
+## 🛠️ Tech Stack
 
-Следвайте стъпките, за да подкарате проекта локално:
+* **Backend:** PHP 8+ (Object-Oriented, MVC Architecture).
+* **Database:** MySQL (PDO Connection).
+* **Frontend:** HTML5, CSS3 (Custom Glassmorphism), JavaScript (Vanilla ES6).
+* **Libraries:** Chart.js (for analytics).
+* **Server:** Apache (XAMPP/WAMP/MAMP).
 
-### 1. Клониране на репозиторито
+---
+
+## ⚙️ Installation & Setup
+
+Follow these steps to run the project locally:
+
+### 1. Clone the Repository
 ```bash
 git clone [https://github.com/PKKostov18/taskflow.git](https://github.com/PKKostov18/taskflow.git)
 cd taskflow
