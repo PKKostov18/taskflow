@@ -14,7 +14,7 @@ class AttachmentController extends Controller
 
     public function upload() {
         if (!isset($_FILES['file']) || !isset($_POST['task_id'])) {
-            echo json_encode(['success' => false, 'message' => 'Няма файл']);
+            echo json_encode(['success' => false, 'message' => 'No file']);
             exit;
         }
 
@@ -39,7 +39,7 @@ class AttachmentController extends Controller
             ]);
 
             $logModel = new ActivityLog();
-            $logModel->log($taskId, $userId, "прикачи файл: $fileName");
+            $logModel->log($taskId, $userId, "Attach file: $fileName");
 
             echo json_encode(['success' => true]);
         } else {

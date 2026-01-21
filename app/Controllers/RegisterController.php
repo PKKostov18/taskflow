@@ -10,7 +10,7 @@ class RegisterController extends Controller
     public function index()
     {
         $this->view('auth/register', [
-            'title' => 'Регистрация в TaskFlow'
+            'title' => 'Register in TaskFlow'
         ]);
     }
 
@@ -20,7 +20,7 @@ class RegisterController extends Controller
         $email = $_POST['email'] ?? '';
         $password = $_POST['password'] ?? '';
         if (empty($username) || empty($email) || empty($password)) {
-            die("Моля, попълнете всички полета!");
+            die("Please fill in all fields!");
         }
 
         $userModel = new User();
@@ -28,7 +28,7 @@ class RegisterController extends Controller
         $existingUser = $userModel->where('email', $email);
         
         if (!empty($existingUser)) {
-            die("Този имейл вече е регистриран! <a href='/register'>Опитай пак</a>");
+            die("This email is already registered! <a href='/register'>Try again</a>");
         }
 
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);

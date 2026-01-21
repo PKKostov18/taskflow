@@ -22,7 +22,7 @@ abstract class Model
         } catch (\PDOException $e) {
             die("Database connection failed: " . $e->getMessage());
         }
-    }
+    } 
 
     public function all()
     {

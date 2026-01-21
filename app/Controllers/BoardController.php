@@ -60,7 +60,7 @@ class BoardController extends Controller
             ]);
 
             $log = new ActivityLog();
-            $log->log($newTaskId, $_SESSION['user']['id'], "създаде задачата.");
+            $log->log($newTaskId, $_SESSION['user']['id'], "created task.");
         }
         
         header("Location: /board?id=$projectId");
@@ -87,7 +87,7 @@ class BoardController extends Controller
         ]);
 
         $log = new ActivityLog();
-        $log->log($id, $_SESSION['user']['id'], "редактира детайлите.");
+        $log->log($id, $_SESSION['user']['id'], "updated task.");
 
         header("Location: /board?id=$projectId");
         exit;
@@ -104,7 +104,7 @@ class BoardController extends Controller
             $taskModel->update($taskId, ['status' => $status]);
 
             $log = new ActivityLog();
-            $log->log($taskId, $_SESSION['user']['id'], "промени статуса на $status");
+            $log->log($taskId, $_SESSION['user']['id'], "change status for $status");
             
             echo json_encode(['success' => true]);
         } else {

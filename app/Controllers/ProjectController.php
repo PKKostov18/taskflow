@@ -20,7 +20,7 @@ class ProjectController extends Controller
         $projects = $projectModel->getAllForUser($userId);
 
         $this->view('projects/index', [
-            'title' => 'Моите Проекти',
+            'title' => 'My projects',
             'projects' => $projects
         ]);
     }
@@ -32,13 +32,13 @@ class ProjectController extends Controller
             exit;
         }
         
-        $this->view('projects/create', ['title' => 'Нов Проект']);
+        $this->view('projects/create', ['title' => 'New project']);
     }
 
     public function store()
     {
         if ($_SESSION['user']['role'] === 'developer') {
-            die('Нямаш права да създаваш проекти!');
+            die('You do not have permission to create projects!');
         }
 
         if (!isset($_SESSION['user'])) {
@@ -51,7 +51,7 @@ class ProjectController extends Controller
         $userId = $_SESSION['user']['id'];
 
         if (empty($name)) {
-            die('Името на проекта е задължително!');
+            die('Project name is required!');
         }
 
         $projectModel = new Project();

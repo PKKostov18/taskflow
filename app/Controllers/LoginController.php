@@ -9,7 +9,7 @@ class LoginController extends Controller
 {
     public function index()
     {
-        $this->view('auth/login', ['title' => 'Вход в системата']);
+        $this->view('auth/login', ['title' => 'Login in the system']);
     }
 
     public function login()
@@ -22,7 +22,7 @@ class LoginController extends Controller
         $user = $users[0] ?? null;
 
         if ($user && password_verify($password, $user['password'])) {
-            
+
             $_SESSION['user'] = [
                 'id' => $user['id'],
                 'username' => $user['username'],
